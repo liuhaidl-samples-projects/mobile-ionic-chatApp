@@ -3,6 +3,7 @@
 ## How to run this sample template app
  - use the git clone command to download this project into your local environment
  - cd to your project root folder - for example cd mySampleProject
+ - npm install //run this command when there is no node_modules folder have been created to load all the necessary js packages. This command will invoke the package.json file
  - ionic install -g cordova
  - ionic install -g ionic
  - ionic serve //run this app using browser mode
