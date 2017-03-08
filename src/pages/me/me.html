@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar [color]="'grey'">
+    <ion-title>我</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ <ion-list>
+    <button ion-item icon-left (click)="goToImagesPage()">
+      <ion-icon name="images" style="color: darkslateblue"></ion-icon>
+      相册
+    </button>
+    <button ion-item icon-left (click)="goToCollectionsPage()">
+      <ion-icon name="cube" style="color: gold"></ion-icon>
+      收藏
+    </button>
+    <button ion-item icon-left (click)="goToCardsPage()">
+      <ion-icon name="card" style="color: lightseagreen"></ion-icon>
+      卡包
+    </button>
+    <button ion-item icon-left (click)="goToSettingsPage()">
+      <ion-icon name="settings" style="color: dodgerblue"></ion-icon>
+      设置
+    </button>
+    <button ion-item icon-left (click)="goToAboutPage()">
+      <ion-icon name="contacts" style="color: orange"></ion-icon>
+      关于我们
+    </button>
+ </ion-list>
+</ion-content>
