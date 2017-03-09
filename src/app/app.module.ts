@@ -29,7 +29,10 @@ import { PaymentPage } from '../pages/payment/payment';
     PaymentPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      backButtonText: '返回',
+      tabsHideOnSubPages: 'true'  //隐藏全部子页面tabs
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
