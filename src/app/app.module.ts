@@ -11,6 +11,7 @@ import { CardsPage } from '../pages/cards/cards';
 import { SettingsPage } from '../pages/settings/settings';
 import { AboutPage } from '../pages/about/about';
 import { UserInfoPage } from '../pages/user-info/user-info';
+import { PaymentPage } from '../pages/payment/payment';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { UserInfoPage } from '../pages/user-info/user-info';
     CardsPage,
     SettingsPage,
     AboutPage,
-    UserInfoPage
+    UserInfoPage,
+    PaymentPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -41,7 +43,8 @@ import { UserInfoPage } from '../pages/user-info/user-info';
     CardsPage,
     SettingsPage,
     AboutPage,
-    UserInfoPage
+    UserInfoPage,
+    PaymentPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

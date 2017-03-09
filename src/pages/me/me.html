@@ -19,11 +19,11 @@
       </span>
     </div>      
     </button> 
-   </ion-list> 
- <ion-list>
+    <div class="row-block">
+    </div>
     <button ion-item icon-left (click)="goToImagesPage()">
      <ion-icon name="images" class="images-color"></ion-icon>
-     相册
+      相册
     </button> 
     <button ion-item icon-left (click)="goToCollectionsPage()">
       <ion-icon name="cube" class="collections-icon-color"></ion-icon>
@@ -33,10 +33,18 @@
       <ion-icon name="card" class="cards-icon-color"></ion-icon>
       卡包
     </button>
+    <button ion-item icon-left (click)="goToPaymentPage()">
+      <ion-icon name="logo-yen" class="money-icon-color"></ion-icon>
+      钱包
+    </button>
+    <div class="row-block">
+    </div>
     <button ion-item icon-left (click)="goToSettingsPage()">
       <ion-icon name="settings" class="settings-icon-color"></ion-icon>
       设置
     </button>
+    <div class="row-block">
+    </div>
     <button ion-item icon-left (click)="goToAboutPage()">
       <ion-icon name="contacts" class="about-us-icon-color"></ion-icon>
       关于我们
