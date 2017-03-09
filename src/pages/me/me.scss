@@ -1,3 +1,51 @@
 page-me {
+ .images-icon-color{
+   color: darkslateblu;
+ }
 
+ .collections-icon-color{
+   color: gold;
+ }
+
+ .cards-icon-color{
+   color: lightseagreen;
+ } 
+
+ .settings-icon-color{
+   color: dodgerblue;
+ } 
+
+ .about-us-icon-color{
+   color: orange;
+ }
+
+ .user-row{
+   height: 4em;     
+ }
+
+ .user-row-column1-span{
+     float: left; 
+     height: 100%; 
+     width: 4em;
+ }
+
+.user-row-column1-span{
+     float: left; 
+     height: 100%; 
+     width: 4em;
+ }
+
+ .user-row-column1-span-div{
+     border:1px solid black;
+     background-color: lightgray;
+     height: 100%; 
+     width: 4em; 
+     text-align: center; 
+     line-height: 4em;
+ }
+
+  .user-row-column2-span{
+     float: left; 
+     padding-left: 1em;
+ }
 }

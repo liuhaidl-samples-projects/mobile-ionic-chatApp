@@ -1,3 +1,26 @@
 page-user-info {
+ .float-left{
+     float: left;
+ }
 
+ .person-image-span{
+     float: right; 
+     height: 100%; 
+     width: 4em;
+ }
+ 
+ .person-image-span-div{
+    border:1px solid black;
+    background-color: lightgray;
+    height: 100%; 
+    width: 4em; 
+    text-align: center; 
+    line-height: 4em;
+ }
+
+ .column-value{
+     float: right; 
+     font-size: medium; 
+     color:grey;
+ }
 }
