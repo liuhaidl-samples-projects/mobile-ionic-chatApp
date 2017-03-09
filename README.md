@@ -1,8 +1,8 @@
-# This is an ionic tabs sample template app
+# This is an ionic mobile chat app
 
-## How to run this sample template app
- - git clone https://github.com/liuhaidl-samples-projects/mobile-ionic-tabsSampleApp.git
- - cd mobile-ionic-tabsSampleApp 
+## How to run this chat app
+ - git clone https://github.com/liuhaidl-samples-projects/mobile-ionic-chatApp.git
+ - cd mobile-ionic-chatApp 
  - npm install //run this command when there is no node_modules folder have been created to load all the necessary js packages. This command will invoke the package.json file
  - npm install -g cordova ionic //run the cordova and ionic modules through npm
  - ionic serve -l //run this app using browser mode with live reload and mobile width and height
