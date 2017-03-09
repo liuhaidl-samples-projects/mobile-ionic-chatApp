@@ -6,10 +6,25 @@
 
 <ion-content padding>
  <ion-list>
+   <button ion-item icon-left (click)="goToUserInfoPage()">
+    <div style="height: 4em"> 
+      <span style="float: left; height: 100%; width: 4em;">
+        <div style="border:1px solid black;background-color: lightgray;; height: 100%; width: 4em; text-align: center; line-height: 4em">
+         <img src="assets/icon/mike.png">
+        </div>
+      </span>
+      <span style="float: left; padding-left: 1em">
+        <h3>Larry</h3>
+        <h6>账号： larryangela</h6> 
+      </span>
+    </div>      
+    </button> 
+   </ion-list> 
+ <ion-list>
     <button ion-item icon-left (click)="goToImagesPage()">
-      <ion-icon name="images" style="color: darkslateblue"></ion-icon>
-      相册
-    </button>
+     <ion-icon name="images" style="color: darkslateblue"></ion-icon>
+     相册
+    </button> 
     <button ion-item icon-left (click)="goToCollectionsPage()">
       <ion-icon name="cube" style="color: gold"></ion-icon>
       收藏

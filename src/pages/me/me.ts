@@ -6,6 +6,7 @@ import { CollectionsPage } from '../collections/collections';
 import { CardsPage } from '../cards/cards';
 import { SettingsPage } from '../settings/settings';
 import { AboutPage } from '../about/about';
+import { UserInfoPage } from '../user-info/user-info';
 
 /*
   Generated class for the Me page.
@@ -52,6 +53,12 @@ export class MePage {
   {
    console.log('MePage.goToAboutPage'); 
    this.navCtrl.push(AboutPage);
+  }
+
+  goToUserInfoPage()
+  {
+   console.log('MePage.goToUserInfoPage'); 
+   this.navCtrl.push(UserInfoPage);
   }
 }
 

@@ -5,6 +5,7 @@ import { FindingPage } from '../finding/finding';
 import { MePage } from '../me/me';
 
 @Component({
+  selector: 'tabs-style',
   templateUrl: 'tabs.html'
 })
 export class TabsPage {

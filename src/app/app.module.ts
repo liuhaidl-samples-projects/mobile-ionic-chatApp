@@ -10,6 +10,7 @@ import { CollectionsPage } from '../pages/collections/collections';
 import { CardsPage } from '../pages/cards/cards';
 import { SettingsPage } from '../pages/settings/settings';
 import { AboutPage } from '../pages/about/about';
+import { UserInfoPage } from '../pages/user-info/user-info';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AboutPage } from '../pages/about/about';
     CollectionsPage,
     CardsPage,
     SettingsPage,
-    AboutPage
+    AboutPage,
+    UserInfoPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -38,7 +40,8 @@ import { AboutPage } from '../pages/about/about';
     CollectionsPage,
     CardsPage,
     SettingsPage,
-    AboutPage
+    AboutPage,
+    UserInfoPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
