@@ -12,6 +12,7 @@
 </ion-header>
 <ion-content padding>
   <ion-list>
+   <div class="row-block"></div>
    <button ion-item icon-left onclick="alert('photo')">
     <div style="height: 4em"> 
       <span class="float-left">头像</span>
@@ -34,7 +35,38 @@
         <span class="column-value">larryangela</span>
       </div>
     </ion-item>
-   
+    <button ion-item icon-left onclick="alert('barcode')">
+      <div> 
+        <span class="float-left">我的二维码</span>
+        <span class="float-right"><ion-icon name="apps"></ion-icon></span>
+      </div>      
+    </button>
+    <div class="row-block"></div>
+    <button ion-item icon-left (click)="goToSexPage()">
+      <div> 
+        <span class="float-left">性别</span>
+        <span class="column-value">男</span>
+      </div>      
+    </button>
+     <button ion-item icon-left onclick="alert('region')">
+      <div> 
+        <span class="float-left">地区</span>
+        <span class="column-value">辽宁 大连</span>
+      </div>      
+    </button>
+    <button ion-item icon-left onclick="alert('signature')">
+      <div> 
+        <span class="float-left">个性签名</span>
+        <span class="column-value">快乐工作和生活</span>
+      </div>      
+    </button>
+    <div class="row-block"></div>
+    <button ion-item icon-left onclick="alert('linkedIn')">
+      <div> 
+        <span class="float-left">LinkedIn户号</span>
+        <span class="column-value">未设置</span>
+      </div>      
+    </button>
+    <div class="row-block"></div>
    </ion-list> 
- 
 </ion-content>

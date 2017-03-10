@@ -3,6 +3,10 @@ page-user-info {
      float: left;
  }
 
+ .float-right{
+     float: right;
+ }
+
  .person-image-span{
      float: right; 
      height: 100%; 
@@ -22,5 +26,12 @@ page-user-info {
      float: right; 
      font-size: medium; 
      color:grey;
+ }
+
+  .row-block{
+     height: 1em; 
+     width: 100%;
+     background-color: ghostwhite;
+     border: 0.1em solid gainsboro;
  }
 }

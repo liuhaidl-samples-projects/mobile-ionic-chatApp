@@ -12,6 +12,7 @@ import { SettingsPage } from '../pages/settings/settings';
 import { AboutPage } from '../pages/about/about';
 import { UserInfoPage } from '../pages/user-info/user-info';
 import { PaymentPage } from '../pages/payment/payment';
+import { SexPage } from '../pages/sex/sex';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PaymentPage } from '../pages/payment/payment';
     SettingsPage,
     AboutPage,
     UserInfoPage,
-    PaymentPage
+    PaymentPage,
+    SexPage
   ],
   imports: [
     IonicModule.forRoot(MyApp, {
@@ -47,7 +49,8 @@ import { PaymentPage } from '../pages/payment/payment';
     SettingsPage,
     AboutPage,
     UserInfoPage,
-    PaymentPage
+    PaymentPage,
+    SexPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

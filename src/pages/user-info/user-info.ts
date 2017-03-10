@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { SexPage } from '../sex/sex';
 
 /*
   Generated class for the UserInfo page.
@@ -17,6 +18,11 @@ export class UserInfoPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad UserInfoPage');
+  }
+
+  goToSexPage(){
+    console.log('UserInfoPage.goToSexPage');
+    this.navCtrl.push(SexPage,{sex: "male"});
   }
 
 }
