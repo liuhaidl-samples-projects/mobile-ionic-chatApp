@@ -13,6 +13,7 @@ import { AboutPage } from '../pages/about/about';
 import { UserInfoPage } from '../pages/user-info/user-info';
 import { PaymentPage } from '../pages/payment/payment';
 import { SexPage } from '../pages/sex/sex';
+import { Storage } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,6 @@ import { SexPage } from '../pages/sex/sex';
     PaymentPage,
     SexPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Storage]
 })
 export class AppModule {}
