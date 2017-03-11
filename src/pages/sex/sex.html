@@ -11,18 +11,14 @@
 </ion-header>
 
 <ion-content padding>
-   <!--<form (submit)="doSubmit($event)" [formGroup]="sexForm">-->
-      <!--<ion-list radio-group formControlName="sex">-->
-      <ion-list radio-group>
-      <ion-item onblur="goBack()">
+    <ion-list radio-group [(ngModel)]="selectedSex">
+      <ion-item>
         <ion-label>男</ion-label>
-        <ion-radio value="male"></ion-radio>
+        <ion-radio value="male" (ionSelect)="selectSexChange('male')"></ion-radio>
       </ion-item>
-      <ion-item onblur="goBack()">
+      <ion-item>
         <ion-label>女</ion-label>
-        <ion-radio value="female"></ion-radio>
+        <ion-radio value="female" (ionSelect)="selectSexChange('female')"></ion-radio>
       </ion-item>
-      <button ion-item icon-left (click)="goBack()"></button>
     </ion-list>
-   <!--</form>-->
 </ion-content>

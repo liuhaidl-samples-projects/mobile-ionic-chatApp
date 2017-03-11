@@ -13,16 +13,33 @@ import { SexPage } from '../sex/sex';
   templateUrl: 'user-info.html'
 })
 export class UserInfoPage {
+  user = {};
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.user = this.searchUserInfo();  
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad UserInfoPage');
   }
 
   goToSexPage(){
-    console.log('UserInfoPage.goToSexPage');
-    this.navCtrl.push(SexPage,{sex: "male"});
+    let user = this.searchUserInfo();
+    console.log('Go to sex page with current sex: '+user.sex.value);
+    this.navCtrl.push(SexPage,{sex: user.sex.value});
+  }
+
+  searchUserInfo(){
+    let user = {
+      name: "Larry",
+      account: "larryangela",
+      barcode: "apps",
+      sex: {value: "male",description: "男"},
+      location: "辽宁 大连",
+      signature: "快乐工作和生活",
+      linkedInAccount: "未设置" 
+    };
+    return user;
   }
 
 }

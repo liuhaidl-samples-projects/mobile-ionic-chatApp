@@ -17,31 +17,22 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'sex.html'
 })
 export class SexPage {
-  //sex;
-  //sexForm;
+  selectedSex;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    /*this.sexForm = new FormGroup({
-      "sex": new FormControl({value: 'male', disabled: false})
-    });*/
-    let sex= navParams.get("sex");
-    console.log('Init Sex :'+sex);
-
+    let currentSex= navParams.get("sex");
+    console.log('The current sex:'+currentSex);
+    this.selectedSex = currentSex;
   }
  
   ionViewDidLoad() {
     console.log('ionViewDidLoad SexPage');
   }
-
- /*doSubmit(event) {
-    console.log('Submitting form', this.sexForm.value);
-    event.preventDefault();
-  }*/
-
-  selectSex(sex){
-    console.log('Sex is', sex);
-  }
-
-  goBack(){
-    this.navCtrl.pop();
+ 
+  selectSexChange(selectedSex){
+     this.selectedSex = selectedSex;
+     console.log('The selected sex: '+ this.selectedSex);
+     //返回到用户个人主页
+     console.log('Go back to user profile main page');
+     this.navCtrl.pop(); 
   }
 }
