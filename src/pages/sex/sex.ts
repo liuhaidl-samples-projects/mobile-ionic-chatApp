@@ -22,7 +22,7 @@ export class SexPage {
   sexCallback;
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
     let currentSex= navParams.get("sex");
-    console.log('The current sex:'+currentSex);
+    console.log('The current sex: {'+currentSex+'}');
     this.selectedSex = currentSex;
     this.sexCallback = navParams.get("sexCallback");
   }
@@ -33,12 +33,20 @@ export class SexPage {
  
   selectSexChange(selectedSex){
      this.selectedSex = selectedSex;
-     console.log('The selected sex: '+ this.selectedSex);
+     console.log('The selected sex: {'+ this.selectedSex+'}');
      //存储用户的性别到Storage
-     this.storage.ready().then(() => {
+     this.storage.get('user').then((userCache) => {
           // set a key/value
-          this.storage.set('sex', this.selectedSex).then(() => {
-          console.log('The selected sex {'+ this.selectedSex + "} has been stored into Storage");
+          userCache.sex.value = this.selectedSex;
+             if(this.selectedSex == "male"){
+              userCache.sex.description = "男";
+             }
+             else{
+              userCache.sex.description = "女";
+             }
+
+          this.storage.set('user', userCache).then(() => {
+          console.log('The selected sex {'+ this.selectedSex + '} has been stored into Storage with user information: '+JSON.stringify(userCache));
        });
 
      });
