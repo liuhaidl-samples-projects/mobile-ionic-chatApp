@@ -14,6 +14,7 @@ import { UserInfoPage } from '../pages/user-info/user-info';
 import { PaymentPage } from '../pages/payment/payment';
 import { SexPage } from '../pages/sex/sex';
 import { Storage } from '@ionic/storage';
+import { MyLocationPage } from '../pages/my-location/my-location';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { Storage } from '@ionic/storage';
     AboutPage,
     UserInfoPage,
     PaymentPage,
-    SexPage
+    SexPage,
+    MyLocationPage
   ],
   imports: [
     IonicModule.forRoot(MyApp, {
@@ -51,7 +53,8 @@ import { Storage } from '@ionic/storage';
     AboutPage,
     UserInfoPage,
     PaymentPage,
-    SexPage
+    SexPage,
+    MyLocationPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Storage]
 })

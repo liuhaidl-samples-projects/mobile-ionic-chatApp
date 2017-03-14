@@ -5,4 +5,18 @@
 </ion-header>
 
 <ion-content padding>
+    <div class="row-block"></div>
+    <button ion-item icon-left>
+     <ion-icon name="qr-scanner" class="qr-scanner-icon-color"></ion-icon>
+      扫一扫
+    </button> 
+    <button ion-item icon-left>
+      <ion-icon name="cube" class="shake-icon-color"></ion-icon>
+      摇一摇
+    </button>
+    <button ion-item icon-left (click)="goToMyLocationPage()">
+      <ion-icon name="locate" class="location-icon-color"></ion-icon>
+      我的位置
+    </button>
+    <div class="row-block"></div>
 </ion-content>

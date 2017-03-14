@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { MyLocationPage } from '../my-location/my-location';
 
 /*
   Generated class for the Finding page.
@@ -18,5 +19,8 @@ export class FindingPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad FindingPage');
   }
-
+ 
+  goToMyLocationPage(){
+    this.navCtrl.push(MyLocationPage);
+  }
 }
