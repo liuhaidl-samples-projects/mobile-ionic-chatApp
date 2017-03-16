@@ -64,7 +64,8 @@ ionViewWillEnter() {
     let point = new BMap.Point(116.397428, 39.90923);
     map.centerAndZoom(point,16);//设置中心和地图显示级别
     
-    let geolocation = new BMap.Geolocation();
+    
+    let geolocation = new BMap.Geolocation();//取当前所在的位置
 	  geolocation.getCurrentPosition(function(r){
 		if(this.getStatus() == "0"){
 		  	let marker = new BMap.Marker(r.point);
@@ -72,7 +73,7 @@ ionViewWillEnter() {
 		    map.panTo(r.point);
         map.centerAndZoom(r.point,16);//设置中心和地图显示级别
       
-        let geoc = new BMap.Geocoder();    
+        let geoc = new BMap.Geocoder();//通过当前所在位置的经纬度坐标，取得所有地址    
         let detailedAddress;
         geoc.getLocation(r.point, function(rs){
             let finalAddress = rs.address;
@@ -94,7 +95,7 @@ ionViewWillEnter() {
                 //message:"亲耐滴，晚上一起吃个饭吧？戳下面的链接看下地喔~"
               }
 
-            let infoWindow = new BMap.InfoWindow("地址："+detailedAddress+"", opts);  // 创建信息窗口对象 
+            let infoWindow = new BMap.InfoWindow("地址："+detailedAddress+"", opts); // 创建信息窗口对象 
             map.openInfoWindow(infoWindow,r.point); //开启信息窗口*/
             marker.addEventListener("click", function(){          
               map.openInfoWindow(infoWindow,r.point); //开启信息窗口
