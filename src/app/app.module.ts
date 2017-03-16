@@ -16,6 +16,10 @@ import { SexPage } from '../pages/sex/sex';
 import { Storage } from '@ionic/storage';
 import { MyLocationPage } from '../pages/my-location/my-location';
 
+export function provideStorage() {
+  return new Storage(['localstorage','sqlite', 'websql', 'indexeddb']);
+}
+ 
 @NgModule({
   declarations: [
     MyApp,
@@ -56,6 +60,7 @@ import { MyLocationPage } from '../pages/my-location/my-location';
     SexPage,
     MyLocationPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Storage]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}
+             ,{provide: Storage, useFactory: provideStorage} ]
 })
 export class AppModule {}

@@ -65,8 +65,10 @@ ionViewWillEnter() {
     map.centerAndZoom(point,16);//设置中心和地图显示级别
     
     let geolocation = new BMap.Geolocation();//取当前所在的位置
+    console.log("MyLocationPage.ionViewWillEnter() has been invoked"); 
 	  geolocation.getCurrentPosition(function(r){
-		if(this.getStatus() == "0"){
+    console.log("Location API Call Return Code: "+this.getStatus());  
+		if(this.getStatus() == 0){
 		  	let marker = new BMap.Marker(r.point);
 		  	map.addOverlay(marker);
 		    map.panTo(r.point);
