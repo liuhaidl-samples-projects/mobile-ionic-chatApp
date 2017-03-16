@@ -48,6 +48,7 @@ export class MyLocationPage {
     //Geolocation.getCurrentPosition().then(pos => {
     //console.log('lat: ' + pos.coords.latitude + ', lon: ' + pos.coords.longitude);
     //});
+
   }
   
 ionViewWillEnter() {
@@ -56,83 +57,84 @@ ionViewWillEnter() {
         let longitudeP = position.coords.longitude;
         console.log("latitudeP: "+latitudeP + " - longitudeP: "+longitudeP);
     });*/
-
+  
     //初始化百度地图
     let map = new BMap.Map(this.mapElement.nativeElement, { enableMapClick: true });//创建地图实例
     map.enableScrollWheelZoom();//启动滚轮放大缩小，默认禁用
     map.enableContinuousZoom();//连续缩放效果，默认禁用
-    let point = new BMap.Point();
+    let point = new BMap.Point(200,200);
     map.centerAndZoom(point,16);//设置中心和地图显示级别
     
     let geolocation = new BMap.Geolocation();//取当前所在的位置
     console.log("MyLocationPage.ionViewWillEnter() has been invoked"); 
 	  geolocation.getCurrentPosition(function(r){
-    console.log("Location API Call Return Code: "+this.getStatus());  
-		if(this.getStatus() == 0){
-		  	let marker = new BMap.Marker(r.point);
-		  	map.addOverlay(marker);
-		    map.panTo(r.point);
-        map.centerAndZoom(r.point,16);//设置中心和地图显示级别
-      
-        let geoc = new BMap.Geocoder();//通过当前所在位置的经纬度坐标，取得所有地址    
-        let detailedAddress;
-        geoc.getLocation(r.point, function(rs){
-            let finalAddress = rs.address;
-            detailedAddress = finalAddress;
-            /*let addComp = rs.addressComponents;
-            detailedAddress = 
-                addComp.province 
-                + "," + addComp.city 
-                + "," + addComp.district 
-                + "," + addComp.street 
-                + "," + addComp.streetNumber;*/
+      console.log("Location API Call Return Code: "+this.getStatus());  
+      if(this.getStatus() == "0"){
+          let marker = new BMap.Marker(r.point);
+          map.addOverlay(marker);
+          map.panTo(r.point);
+          map.centerAndZoom(r.point,16);//设置中心和地图显示级别
+        
+          let geoc = new BMap.Geocoder();//通过当前所在位置的经纬度坐标，取得所有地址    
+          let detailedAddress;
+          geoc.getLocation(r.point, function(rs){
+              let finalAddress = rs.address;
+              detailedAddress = finalAddress;
+              console.log("Your current address: {"+detailedAddress+"}");
+              /*let addComp = rs.addressComponents;
+              detailedAddress = 
+                  addComp.province 
+                  + "," + addComp.city 
+                  + "," + addComp.district 
+                  + "," + addComp.street 
+                  + "," + addComp.streetNumber;*/
 
-            let opts = {
-                width : 50,     // 信息窗口宽度
-                height: 30,     // 信息窗口高度
-                title : "我的位置" , // 信息窗口标题
-                offset: new BMap.Size(0,-20),
-                enableMessage:false//设置允许信息窗发送短息
-                //message:"亲耐滴，晚上一起吃个饭吧？戳下面的链接看下地喔~"
-              }
+              let opts = {
+                  width : 50,     // 信息窗口宽度
+                  height: 30,     // 信息窗口高度
+                  title : "我的位置" , // 信息窗口标题
+                  offset: new BMap.Size(0,-20),
+                  enableMessage:false//设置允许信息窗发送短息
+                  //message:"亲耐滴，晚上一起吃个饭吧？戳下面的链接看下地喔~"
+                };
 
-            let infoWindow = new BMap.InfoWindow("地址："+detailedAddress+"", opts); // 创建信息窗口对象 
-            map.openInfoWindow(infoWindow,r.point); //开启信息窗口*/
-            marker.addEventListener("click", function(){          
-              map.openInfoWindow(infoWindow,r.point); //开启信息窗口
-            });
-        });
-      
-        /*let convertor = new BMap.Convertor();
-        let pointArr = [];
-        pointArr.push(r.point);
-        convertor.translate(pointArr, 1, 5, function(data){
-          if(data.status === 0) {
-            let marker = new BMap.Marker(data.points[0]);
-            map.addOverlay(marker);
+              let infoWindow = new BMap.InfoWindow("地址："+detailedAddress+"", opts); // 创建信息窗口对象 
+              map.openInfoWindow(infoWindow,r.point); //开启信息窗口*/
+              marker.addEventListener("click", function(){          
+                map.openInfoWindow(infoWindow,r.point); //开启信息窗口
+              });
+          });
+        
+          /*let convertor = new BMap.Convertor();
+          let pointArr = [];
+          pointArr.push(r.point);
+          convertor.translate(pointArr, 1, 5, function(data){
+            if(data.status === 0) {
+              let marker = new BMap.Marker(data.points[0]);
+              map.addOverlay(marker);
 
-            let geoc = new BMap.Geocoder();    
-            geoc.getLocation(data.points[0], function(rs){
-                let addComp = rs.addressComponents;
-                let detailedAddress = 
-                addComp.province 
-                + "<br> " + addComp.city 
-                + "<br> " + addComp.district 
-                + "<br>" + addComp.street 
-                + "<br>" + addComp.streetNumber;
-                let labelgg = new BMap.Label("我的位置:<br> "+detailedAddress+"",{offset:new BMap.Size(0,15)});
-                marker.setLabel(labelgg);  
-            });
+              let geoc = new BMap.Geocoder();    
+              geoc.getLocation(data.points[0], function(rs){
+                  let addComp = rs.addressComponents;
+                  let detailedAddress = 
+                  addComp.province 
+                  + "<br> " + addComp.city 
+                  + "<br> " + addComp.district 
+                  + "<br>" + addComp.street 
+                  + "<br>" + addComp.streetNumber;
+                  let labelgg = new BMap.Label("我的位置:<br> "+detailedAddress+"",{offset:new BMap.Size(0,15)});
+                  marker.setLabel(labelgg);  
+              });
 
-            map.panTo(r.point);
-            map.centerAndZoom(data.points[0],16);//设置中心和地图显示级别
+              map.panTo(r.point);
+              map.centerAndZoom(data.points[0],16);//设置中心和地图显示级别
+            }
+          });*/
           }
-        });*/
-        }
-		  else {
-		  	alert('failed'+this.getStatus());
-		  }        
-	  },{enableHighAccuracy: true})
+        else {
+          alert('failed'+this.getStatus());
+        }        
+	  },{enableHighAccuracy: true, timeout: 30});
 
     //地图放大缩小控件
     let sizeMap = new BMap.Size(10, 80);//显示位置
@@ -148,6 +150,5 @@ ionViewWillEnter() {
       offset: size3D
     }));
 
-    
   }
 }
