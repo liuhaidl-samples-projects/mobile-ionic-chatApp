@@ -51,19 +51,18 @@ export class MyLocationPage {
   }
   
 ionViewWillEnter() {
-    navigator.geolocation.getCurrentPosition(function (position){
+    /*navigator.geolocation.getCurrentPosition(function (position){
         let latitudeP = position.coords.latitude;
         let longitudeP = position.coords.longitude;
         console.log("latitudeP: "+latitudeP + " - longitudeP: "+longitudeP);
-    });
+    });*/
 
     //初始化百度地图
     let map = new BMap.Map(this.mapElement.nativeElement, { enableMapClick: true });//创建地图实例
     map.enableScrollWheelZoom();//启动滚轮放大缩小，默认禁用
     map.enableContinuousZoom();//连续缩放效果，默认禁用
-    let point = new BMap.Point(116.397428, 39.90923);
+    let point = new BMap.Point();
     map.centerAndZoom(point,16);//设置中心和地图显示级别
-    
     
     let geolocation = new BMap.Geolocation();//取当前所在的位置
 	  geolocation.getCurrentPosition(function(r){
