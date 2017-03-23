@@ -16,6 +16,9 @@ import { SexPage } from '../pages/sex/sex';
 import { Storage } from '@ionic/storage';
 import { MyLocationPage } from '../pages/my-location/my-location';
 
+//Native apis
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+
 export function provideStorage() {
   return new Storage(['localstorage','sqlite', 'websql', 'indexeddb']);
 }
@@ -61,6 +64,7 @@ export function provideStorage() {
     MyLocationPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}
-             ,{provide: Storage, useFactory: provideStorage} ]
+             ,{provide: Storage, useFactory: provideStorage}
+             ,BarcodeScanner]
 })
 export class AppModule {}

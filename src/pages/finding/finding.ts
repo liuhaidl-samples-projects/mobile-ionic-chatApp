@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { MyLocationPage } from '../my-location/my-location';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 /*
   Generated class for the Finding page.
@@ -14,7 +15,9 @@ import { MyLocationPage } from '../my-location/my-location';
 })
 export class FindingPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController
+  , public navParams: NavParams
+  , public barcodeScanner: BarcodeScanner) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FindingPage');
@@ -23,4 +26,14 @@ export class FindingPage {
   goToMyLocationPage(){
     this.navCtrl.push(MyLocationPage);
   }
+
+  scan(){
+     this.barcodeScanner.scan().then((barcodeData) => {
+        // Success! Barcode data is here
+        alert("Barcode Data: "+barcodeData);
+      }, (err) => {
+        // An error occurred
+        alert("Barcode Scan Error: "+err);
+    });
+  }  
 }
