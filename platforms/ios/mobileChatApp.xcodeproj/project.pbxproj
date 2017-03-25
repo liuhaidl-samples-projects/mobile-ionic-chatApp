@@ -21,6 +21,21 @@
 		A2DDDDD05E6640419FEBAA2D /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 716E9820068A4BD69919FB82 /* CDVViewController+SplashScreen.m */; };
 		1BCE30FCDF4142749FD352BD /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AB004434844556B3EC6C53 /* CDVStatusBar.m */; };
 		43AEBE83062A4BC6AE9490CB /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EF1702BB6C43A5B36A3A69 /* IonicKeyboard.m */; };
+		D5CACB38CEF945BF8127512F /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5080B57CE29C438897EA3FDD /* CDVLocation.m */; };
+		0DD435F2834A401391D522ED /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176EF81950604D209BF5C267 /* CoreLocation.framework */; };
+		6CA3C9363FCA45F1962B2B3B /* CDVBarcodeScanner.mm in Resources */ = {isa = PBXBuildFile; fileRef = 0D781E8CC241403E9FE44B7E /* CDVBarcodeScanner.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		68D64ED3A48746EAB15CA84A /* zxing-all-in-one.cpp in Resources */ = {isa = PBXBuildFile; fileRef = 4B11EA3D4CDC45138BCFCB3B /* zxing-all-in-one.cpp */; };
+		AABFE4AA5669486C87ABFBC8 /* scannerOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80030A828E044C18B3F262A7 /* scannerOverlay.xib */; };
+		18D4D6BB8897410EA5D5D2D9 /* CDVBarcodeScanner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A0CC716F2B4B40B2AE6CD10E /* CDVBarcodeScanner.bundle */; };
+		C99FF0E287484259A49C77EC /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A98CCFB93543549CAF1DCF /* libiconv.dylib */; };
+		2A4047352E754EB7AAFD13F8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CA5DE0F5054195803F6EAE /* AVFoundation.framework */; };
+		0A2A440F023E484FBF2F54CA /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4378D839C448BD835CC091 /* CoreVideo.framework */; };
+		F2EFFCB54D0046A6A395D46E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77EFAEA802AA4AFF84BBE3A7 /* QuartzCore.framework */; };
+		B40FC45FD11B4BC0874FD6CD /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8B942DA3954615BDE6C5A0 /* CoreImage.framework */; };
+		E0BA86FBC9B54D3A84BDF493 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D55300F5D1D34620BD60F3F3 /* AudioToolbox.framework */; };
+		6DB96CD04F7F43FC8CAE0279 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 161BB7BAA58F4F95BADA74F0 /* CDVInAppBrowser.m */; };
+		34F49FC1D1F8493698A631A3 /* SQLitePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE3EE689B3F4C699DBD7E98 /* SQLitePlugin.m */; };
+		28BF9534281C4CC9821E2765 /* sqlite3.c in Resources */ = {isa = PBXBuildFile; fileRef = DF8605DC8E094A9DB26CB63B /* sqlite3.c */; settings = {COMPILER_FLAGS = "-DSQLITE_TEMP_STORE=2 -DSQLITE_THREADSAFE=1 -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_RTREE  -DSQLITE_OMIT_BUILTIN_TEST -DSQLITE_OMIT_LOAD_EXTENSION -DSQLITE_DEFAULT_PAGE_SIZE=1024 -DSQLITE_DEFAULT_CACHE_SIZE=2000"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +56,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0207DA571B56EA530066E2B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "tabsSampleApp/Images.xcassets"; sourceTree = SOURCE_ROOT; };
+		0207DA571B56EA530066E2B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "mobileChatApp/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* tabsSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tabsSampleApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* mobileChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobileChatApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		301BF56E109A69640062928A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
@@ -54,11 +69,11 @@
 		3047A50F1AB8059700498E2A /* build-debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-debug.xcconfig"; path = cordova/build-debug.xcconfig; sourceTree = SOURCE_ROOT; };
 		3047A5101AB8059700498E2A /* build-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-release.xcconfig"; path = cordova/build-release.xcconfig; sourceTree = SOURCE_ROOT; };
 		3047A5111AB8059700498E2A /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = build.xcconfig; path = cordova/build.xcconfig; sourceTree = SOURCE_ROOT; };
-		32CA4F630368D1EE00C91783 /* tabsSampleApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "tabsSampleApp-Prefix.pch"; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* tabsSampleApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "tabsSampleApp-Info.plist"; path = "tabsSampleApp/tabsSampleApp-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = SOURCE_ROOT; };
+		32CA4F630368D1EE00C91783 /* mobileChatApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mobileChatApp-Prefix.pch"; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* mobileChatApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "mobileChatApp-Info.plist"; path = "mobileChatApp/mobileChatApp-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = SOURCE_ROOT; };
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
-		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "tabsSampleApp/config.xml"; sourceTree = "<group>"; };
+		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "mobileChatApp/config.xml"; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		ECA29265DB334445B911E361 /* CDVLogger.m */ = {isa = PBXFileReference; name = "CDVLogger.m"; path = "cordova-plugin-console/CDVLogger.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		81DF3DC8470E416DB784C58C /* CDVLogger.h */ = {isa = PBXFileReference; name = "CDVLogger.h"; path = "cordova-plugin-console/CDVLogger.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
@@ -72,6 +87,26 @@
 		3A523C32D8484B3AA712CC54 /* CDVStatusBar.h */ = {isa = PBXFileReference; name = "CDVStatusBar.h"; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		10EF1702BB6C43A5B36A3A69 /* IonicKeyboard.m */ = {isa = PBXFileReference; name = "IonicKeyboard.m"; path = "ionic-plugin-keyboard/IonicKeyboard.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		5C392B5743AA48249905852C /* IonicKeyboard.h */ = {isa = PBXFileReference; name = "IonicKeyboard.h"; path = "ionic-plugin-keyboard/IonicKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		5080B57CE29C438897EA3FDD /* CDVLocation.m */ = {isa = PBXFileReference; name = "CDVLocation.m"; path = "cordova-plugin-geolocation/CDVLocation.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		FECB67D5212240B98FAE2F48 /* CDVLocation.h */ = {isa = PBXFileReference; name = "CDVLocation.h"; path = "cordova-plugin-geolocation/CDVLocation.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		176EF81950604D209BF5C267 /* CoreLocation.framework */ = {isa = PBXFileReference; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		0D781E8CC241403E9FE44B7E /* CDVBarcodeScanner.mm */ = {isa = PBXFileReference; name = "CDVBarcodeScanner.mm"; path = "phonegap-plugin-barcodescanner/CDVBarcodeScanner.mm"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4B11EA3D4CDC45138BCFCB3B /* zxing-all-in-one.cpp */ = {isa = PBXFileReference; name = "zxing-all-in-one.cpp"; path = "phonegap-plugin-barcodescanner/zxing-all-in-one.cpp"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		557ABE3253FF4975B75FB2C9 /* zxing-all-in-one.h */ = {isa = PBXFileReference; name = "zxing-all-in-one.h"; path = "phonegap-plugin-barcodescanner/zxing-all-in-one.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		80030A828E044C18B3F262A7 /* scannerOverlay.xib */ = {isa = PBXFileReference; name = "scannerOverlay.xib"; path = "scannerOverlay.xib"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = file.xib; explicitFileType = undefined; includeInIndex = 0; };
+		A0CC716F2B4B40B2AE6CD10E /* CDVBarcodeScanner.bundle */ = {isa = PBXFileReference; name = "CDVBarcodeScanner.bundle"; path = "CDVBarcodeScanner.bundle"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.plug-in; explicitFileType = undefined; includeInIndex = 0; };
+		A6A98CCFB93543549CAF1DCF /* libiconv.dylib */ = {isa = PBXFileReference; name = "libiconv.dylib"; path = "usr/lib/libiconv.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
+		A4CA5DE0F5054195803F6EAE /* AVFoundation.framework */ = {isa = PBXFileReference; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		CC4378D839C448BD835CC091 /* CoreVideo.framework */ = {isa = PBXFileReference; name = "CoreVideo.framework"; path = "System/Library/Frameworks/CoreVideo.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		77EFAEA802AA4AFF84BBE3A7 /* QuartzCore.framework */ = {isa = PBXFileReference; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		EA8B942DA3954615BDE6C5A0 /* CoreImage.framework */ = {isa = PBXFileReference; name = "CoreImage.framework"; path = "System/Library/Frameworks/CoreImage.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		D55300F5D1D34620BD60F3F3 /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		161BB7BAA58F4F95BADA74F0 /* CDVInAppBrowser.m */ = {isa = PBXFileReference; name = "CDVInAppBrowser.m"; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		878BB143C39A433F8B14FA2F /* CDVInAppBrowser.h */ = {isa = PBXFileReference; name = "CDVInAppBrowser.h"; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		FEE3EE689B3F4C699DBD7E98 /* SQLitePlugin.m */ = {isa = PBXFileReference; name = "SQLitePlugin.m"; path = "cordova-sqlite-storage/SQLitePlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		DF8605DC8E094A9DB26CB63B /* sqlite3.c */ = {isa = PBXFileReference; name = "sqlite3.c"; path = "cordova-sqlite-storage/sqlite3.c"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		99EDC58A134B4D0C8D99E1A4 /* SQLitePlugin.h */ = {isa = PBXFileReference; name = "SQLitePlugin.h"; path = "cordova-sqlite-storage/SQLitePlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		F7A5A666EB8F425C9F5EA5DD /* sqlite3.h */ = {isa = PBXFileReference; name = "sqlite3.h"; path = "cordova-sqlite-storage/sqlite3.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +115,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
+				0DD435F2834A401391D522ED /* CoreLocation.framework in Frameworks */,
+				C99FF0E287484259A49C77EC /* libiconv.dylib in Frameworks */,
+				2A4047352E754EB7AAFD13F8 /* AVFoundation.framework in Frameworks */,
+				0A2A440F023E484FBF2F54CA /* CoreVideo.framework in Frameworks */,
+				F2EFFCB54D0046A6A395D46E /* QuartzCore.framework in Frameworks */,
+				B40FC45FD11B4BC0874FD6CD /* CoreImage.framework in Frameworks */,
+				E0BA86FBC9B54D3A84BDF493 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,13 +138,13 @@
 				1D3623250D0F684500981E51 /* AppDelegate.m */,
 			);
 			name = Classes;
-			path = "tabsSampleApp/Classes";
+			path = "mobileChatApp/Classes";
 			sourceTree = SOURCE_ROOT;
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* tabsSampleApp.app */,
+				1D6058910D05DD3D006BFB54 /* mobileChatApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,12 +169,12 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32CA4F630368D1EE00C91783 /* tabsSampleApp-Prefix.pch */,
+				32CA4F630368D1EE00C91783 /* mobileChatApp-Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 				ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */,
 			);
 			name = "Other Sources";
-			path = "tabsSampleApp";
+			path = "mobileChatApp";
 			sourceTree = "<group>";
 		};
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
@@ -140,15 +182,24 @@
 			children = (
 				0207DA571B56EA530066E2B4 /* Images.xcassets */,
 				3047A50E1AB8057F00498E2A /* config */,
-				8D1107310486CEB800E47090 /* tabsSampleApp-Info.plist */,
+				8D1107310486CEB800E47090 /* mobileChatApp-Info.plist */,
+				80030A828E044C18B3F262A7 /* scannerOverlay.xib */,
+				A0CC716F2B4B40B2AE6CD10E /* CDVBarcodeScanner.bundle */,
 			);
 			name = Resources;
-			path = "tabsSampleApp/Resources";
+			path = "mobileChatApp/Resources";
 			sourceTree = "<group>";
 		};
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				176EF81950604D209BF5C267 /* CoreLocation.framework */,
+				A6A98CCFB93543549CAF1DCF /* libiconv.dylib */,
+				A4CA5DE0F5054195803F6EAE /* AVFoundation.framework */,
+				CC4378D839C448BD835CC091 /* CoreVideo.framework */,
+				77EFAEA802AA4AFF84BBE3A7 /* QuartzCore.framework */,
+				EA8B942DA3954615BDE6C5A0 /* CoreImage.framework */,
+				D55300F5D1D34620BD60F3F3 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -186,9 +237,20 @@
 				3A523C32D8484B3AA712CC54 /* CDVStatusBar.h */,
 				10EF1702BB6C43A5B36A3A69 /* IonicKeyboard.m */,
 				5C392B5743AA48249905852C /* IonicKeyboard.h */,
+				5080B57CE29C438897EA3FDD /* CDVLocation.m */,
+				FECB67D5212240B98FAE2F48 /* CDVLocation.h */,
+				0D781E8CC241403E9FE44B7E /* CDVBarcodeScanner.mm */,
+				4B11EA3D4CDC45138BCFCB3B /* zxing-all-in-one.cpp */,
+				557ABE3253FF4975B75FB2C9 /* zxing-all-in-one.h */,
+				161BB7BAA58F4F95BADA74F0 /* CDVInAppBrowser.m */,
+				878BB143C39A433F8B14FA2F /* CDVInAppBrowser.h */,
+				FEE3EE689B3F4C699DBD7E98 /* SQLitePlugin.m */,
+				DF8605DC8E094A9DB26CB63B /* sqlite3.c */,
+				99EDC58A134B4D0C8D99E1A4 /* SQLitePlugin.h */,
+				F7A5A666EB8F425C9F5EA5DD /* sqlite3.h */,
 			);
 			name = Plugins;
-			path = "tabsSampleApp/Plugins";
+			path = "mobileChatApp/Plugins";
 			sourceTree = SOURCE_ROOT;
 		};
 		EB87FDF11871DA420020F90C /* Staging */ = {
@@ -203,9 +265,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* tabsSampleApp */ = {
+		1D6058900D05DD3D006BFB54 /* mobileChatApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "tabsSampleApp" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "mobileChatApp" */;
 			buildPhases = (
 				304B58A110DAC018002A0835 /* Copy www directory */,
 				1D60588D0D05DD3D006BFB54 /* Resources */,
@@ -217,9 +279,9 @@
 			dependencies = (
 				301BF551109A68C00062928A /* PBXTargetDependency */,
 			);
-			name = "tabsSampleApp";
-			productName = "tabsSampleApp";
-			productReference = 1D6058910D05DD3D006BFB54 /* tabsSampleApp.app */;
+			name = "mobileChatApp";
+			productName = "mobileChatApp";
+			productReference = 1D6058910D05DD3D006BFB54 /* mobileChatApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -244,7 +306,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* tabsSampleApp */,
+				1D6058900D05DD3D006BFB54 /* mobileChatApp */,
 			);
 		};
 /* End PBXProject section */
@@ -269,6 +331,8 @@
 				3047A5141AB8059700498E2A /* build.xcconfig in Resources */,
 				0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */,
 				3047A5121AB8059700498E2A /* build-debug.xcconfig in Resources */,
+				AABFE4AA5669486C87ABFBC8 /* scannerOverlay.xib in Resources */,
+				18D4D6BB8897410EA5D5D2D9 /* CDVBarcodeScanner.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +370,12 @@
 				A2DDDDD05E6640419FEBAA2D /* CDVViewController+SplashScreen.m in Sources */,
 				1BCE30FCDF4142749FD352BD /* CDVStatusBar.m in Sources */,
 				43AEBE83062A4BC6AE9490CB /* IonicKeyboard.m in Sources */,
+				D5CACB38CEF945BF8127512F /* CDVLocation.m in Sources */,
+				6CA3C9363FCA45F1962B2B3B /* CDVBarcodeScanner.mm in Resources */,
+				68D64ED3A48746EAB15CA84A /* zxing-all-in-one.cpp in Resources */,
+				6DB96CD04F7F43FC8CAE0279 /* CDVInAppBrowser.m in Sources */,
+				34F49FC1D1F8493698A631A3 /* SQLitePlugin.m in Sources */,
+				28BF9534281C4CC9821E2765 /* sqlite3.c in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,12 +403,12 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "tabsSampleApp/tabsSampleApp-Prefix.pch";
+				GCC_PREFIX_HEADER = "mobileChatApp/mobileChatApp-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
-				INFOPLIST_FILE = "tabsSampleApp/tabsSampleApp-Info.plist";
+				INFOPLIST_FILE = "mobileChatApp/mobileChatApp-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				PRODUCT_NAME = "tabsSampleApp";
+				PRODUCT_NAME = "mobileChatApp";
 			};
 			name = Debug;
 		};
@@ -353,11 +423,11 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "tabsSampleApp/tabsSampleApp-Prefix.pch";
+				GCC_PREFIX_HEADER = "mobileChatApp/mobileChatApp-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
-				INFOPLIST_FILE = "tabsSampleApp/tabsSampleApp-Info.plist";
-				PRODUCT_NAME = "tabsSampleApp";
+				INFOPLIST_FILE = "mobileChatApp/mobileChatApp-Info.plist";
+				PRODUCT_NAME = "mobileChatApp";
 			};
 			name = Release;
 		};
@@ -384,7 +454,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				PRODUCT_NAME = "tabsSampleApp";
+				PRODUCT_NAME = "mobileChatApp";
 			};
 			name = Debug;
 		};
@@ -410,14 +480,14 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				PRODUCT_NAME = "tabsSampleApp";
+				PRODUCT_NAME = "mobileChatApp";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "tabsSampleApp" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "mobileChatApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,

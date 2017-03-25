@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .ion-ios-add:before {
   content: "\f102";
 }
@@ -4776,10 +4777,6 @@ textarea::-webkit-input-placeholder {
   padding-left: 2px;
 }
 
-textarea::-moz-placeholder {
-  padding-left: 2px;
-}
-
 textarea:-ms-input-placeholder {
   padding-left: 2px;
 }
@@ -5157,6 +5154,10 @@ ion-footer {
 
 [text-nowrap] {
   white-space: nowrap;
+}
+
+[text-wrap] {
+  white-space: normal;
 }
 
 [text-uppercase] {
@@ -12369,6 +12370,18 @@ ion-infinite-scroll-content {
   color: #666;
 }
 
+.infinite-loading-spinner .spinner-ios line,
+.infinite-loading-spinner .spinner-ios-small line,
+.infinite-loading-spinner .spinner-crescent circle {
+  stroke: #666;
+}
+
+.infinite-loading-spinner .spinner-bubbles circle,
+.infinite-loading-spinner .spinner-circles circle,
+.infinite-loading-spinner .spinner-dots circle {
+  fill: #666;
+}
+
 ion-infinite-scroll-content[state=loading] .infinite-loading {
   display: block;
 }
@@ -13808,11 +13821,6 @@ ion-label[floating] {
   -ms-grid-row-align: stretch;
   align-self: stretch;
   max-width: 100%;
-}
-
-.item-select ion-label[floating] {
-  -webkit-transform: translate3d(0, 0, 0) scale(0.8);
-  transform: translate3d(0, 0, 0) scale(0.8);
 }
 
 .label-ios {
@@ -16399,6 +16407,18 @@ ion-refresher-content {
   color: #000;
 }
 
+.refresher-refreshing .spinner-ios line,
+.refresher-refreshing .spinner-ios-small line,
+.refresher-refreshing .spinner-crescent circle {
+  stroke: #000;
+}
+
+.refresher-refreshing .spinner-bubbles circle,
+.refresher-refreshing .spinner-circles circle,
+.refresher-refreshing .spinner-dots circle {
+  fill: #000;
+}
+
 ion-refresher-content[state=pulling] .refresher-pulling {
   display: block;
 }
@@ -18609,6 +18629,117 @@ ion-spinner.spinner-paused svg {
 .spinner-wp-dark.spinner-circles circle,
 .spinner-wp-dark.spinner-dots circle {
   fill: #222;
+}
+
+ion-split-pane {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  contain: strict;
+}
+
+.split-pane-side:not(ion-menu) {
+  display: none;
+}
+
+.split-pane-visible > .split-pane-side,
+.split-pane-visible > .split-pane-main {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  box-shadow: none !important;
+}
+
+.split-pane-visible > .split-pane-side {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-order: -1;
+  -ms-flex-order: -1;
+  order: -1;
+}
+
+.split-pane-visible > .split-pane-main,
+.split-pane-visible > ion-nav.split-pane-side,
+.split-pane-visible > ion-tabs.split-pane-side,
+.split-pane-visible > ion-menu.menu-enabled {
+  display: block;
+}
+
+.split-pane-visible > ion-split-pane.split-pane-side,
+.split-pane-visible > ion-split-pane.split-pane-main {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.split-pane-visible > ion-menu.menu-enabled > .menu-inner {
+  right: 0;
+  left: 0;
+  width: auto;
+  box-shadow: none !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+}
+
+.split-pane-visible > ion-menu.menu-enabled > .ion-backdrop {
+  display: hidden !important;
+}
+
+.split-pane-visible > .split-pane-side[side=right] {
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.split-pane-ios.split-pane-visible > .split-pane-side {
+  min-width: 270px;
+  max-width: 28%;
+  border-right: 0.55px solid #c8c7cc;
+  border-left: 0;
+}
+
+.split-pane-ios.split-pane-visible > .split-pane-side[side=right] {
+  border-right: 0;
+  border-left: 0.55px solid #c8c7cc;
+}
+
+.split-pane-md.split-pane-visible > .split-pane-side {
+  min-width: 270px;
+  max-width: 28%;
+  border-right: 1px solid #dedede;
+  border-left: 0;
+}
+
+.split-pane-md.split-pane-visible > .split-pane-side[side=right] {
+  border-right: 0;
+  border-left: 1px solid #dedede;
+}
+
+.split-pane-wp.split-pane-visible > .split-pane-side {
+  min-width: 270px;
+  max-width: 28%;
+  border-right: 1px solid transparent;
+  border-left: 0;
+}
+
+.split-pane-wp.split-pane-visible > .split-pane-side[side=right] {
+  border-right: 0;
+  border-left: 1px solid transparent;
 }
 
 .tabbar {
@@ -24385,4 +24516,133 @@ ion-navbar.toolbar {
   .wp .modal-wrapper > .ion-page > ion-header > ion-content.statusbar-padding:first-child[padding-top] .scroll-content {
     padding-top: calc(16px + 20px);
   }
+}
+
+page-finding .row-block {
+  height: 1em;
+  width: 100%;
+  background-color: ghostwhite;
+  border: 0.1em solid gainsboro;
+}
+
+page-finding .qr-scanner-icon-color {
+  color: deepskyblue;
+}
+
+page-finding .location-icon-color {
+  color: deepskyblue;
+}
+
+page-finding .shake-icon-color {
+  color: deepskyblue;
+}
+
+page-me .images-icon-color {
+  color: darkslateblu;
+}
+
+page-me .collections-icon-color {
+  color: gold;
+}
+
+page-me .cards-icon-color {
+  color: lightseagreen;
+}
+
+page-me .settings-icon-color {
+  color: dodgerblue;
+}
+
+page-me .about-us-icon-color {
+  color: orange;
+}
+
+page-me .money-icon-color {
+  color: gold;
+}
+
+page-me .user-row {
+  height: 4em;
+}
+
+page-me .user-row-column1-span {
+  float: left;
+  height: 100%;
+  width: 4em;
+}
+
+page-me .user-row-column1-span {
+  float: left;
+  height: 100%;
+  width: 4em;
+}
+
+page-me .user-row-column1-span-div {
+  border: 1px solid black;
+  background-color: lightgray;
+  height: 100%;
+  width: 4em;
+  text-align: center;
+  line-height: 4em;
+}
+
+page-me .user-row-column2-span {
+  float: left;
+  padding-left: 1em;
+}
+
+page-me .row-block {
+  height: 1em;
+  width: 100%;
+  background-color: ghostwhite;
+  border: 0.1em solid gainsboro;
+}
+
+page-my-location #map {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  font-family: "微软雅黑";
+}
+
+page-my-location .scroll {
+  height: 100%;
+}
+
+page-user-info .float-left {
+  float: left;
+}
+
+page-user-info .float-right {
+  float: right;
+}
+
+page-user-info .person-image-span {
+  float: right;
+  height: 100%;
+  width: 4em;
+}
+
+page-user-info .person-image-span-div {
+  border: 1px solid black;
+  background-color: lightgray;
+  height: 100%;
+  width: 4em;
+  text-align: center;
+  line-height: 4em;
+}
+
+page-user-info .column-value {
+  float: right;
+  font-size: medium;
+  color: grey;
+}
+
+page-user-info .row-block {
+  height: 1em;
+  width: 100%;
+  background-color: ghostwhite;
+  border: 0.1em solid gainsboro;
 }

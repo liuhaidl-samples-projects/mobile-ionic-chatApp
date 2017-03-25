@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>83AJA687RG.com.ionicframework.tabssampleapp388977</string>
+	<string>A3C63944E5.com.ionicframework.mobileChatApp</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>83AJA687RG.com.ionicframework.tabssampleapp388977</string>
+		<string>A3C63944E5.com.ionicframework.mobileChatApp</string>
 	</array>
 </dict>
 </plist>
