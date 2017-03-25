@@ -1,3 +1,6 @@
 *.log
 www/build/
 node_modules/
+platforms/ios/CordovaLib/build/
+platforms/ios/build/
+platforms/ios/www/build/
